@@ -1140,7 +1140,10 @@ async function handleSubmit(event) {
     if (response.ok) {
       sentMessage.style.display = 'block';
       form.reset();
-
+      // Redirection manuelle après 1,5s
+      setTimeout(() => {
+        window.location.href = "https://ahodakin.github.io/mon-portfolio/#contact";
+      }, 1500);
       // Faire disparaître le message après 3 secondes (optionnel)
       setTimeout(() => {
         sentMessage.style.display = 'none';
